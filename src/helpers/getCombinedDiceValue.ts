@@ -52,10 +52,20 @@ export function getCombinedDiceValue(
     if (isDie(dieOrDice)) {
       const value = values[dieOrDice.id];
       if (value !== undefined) {
-        if (value === 0 && dieOrDice.type === "D10") {
-          currentValues.push(10);
-        } else {
+        if (dieOrDice.style === "NEBULA" && dieOrDice.type === "D6") {
+          currentValues.push(0);
+        } else if (dieOrDice.style === "GEMSTONE" && dieOrDice.type === "D6") {
+          currentValues.push(0);
+        } else if (dieOrDice.type === "D4" || dieOrDice.type === "D20") {
           currentValues.push(value);
+        } else if (value === 0 && dieOrDice.type === "D10") {
+          currentValues.push(2);
+        } else if (value >= 10){ 
+          currentValues.push(2);
+        } else if (value >= 6){ 
+          currentValues.push(1);
+        } else {
+          currentValues.push(0);
         }
       }
     } else if (isDice(dieOrDice)) {
