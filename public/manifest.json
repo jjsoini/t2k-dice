@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "manifest_version": 1,
   "author": "Jussi Soini aka Pulpscape",
+  "short_name": "T2K Dice",
+  "display": "standalone",
   "icon": "/logo.png",
   "description": "Dice for Twilight 2000 4ed",
   "action": {
