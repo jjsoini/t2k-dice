@@ -6,7 +6,7 @@ import normal from "./normal.jpg";
 import { gltfTexture } from "../../helpers/gltfTexture";
 
 export function NebulaMaterial(
-  props: JSX.IntrinsicElements["meshStandardMaterial"]
+  props: JSX.IntrinsicElements["meshPhysicalMaterial"]
 ) {
   const [albedoMap, ormMap, normalMap] = useTexture(
     [albedo, orm, normal],
@@ -14,12 +14,14 @@ export function NebulaMaterial(
   );
 
   return (
-    <meshStandardMaterial
+    <meshPhysicalMaterial
       map={albedoMap}
       aoMap={ormMap}
       roughnessMap={ormMap}
       metalnessMap={ormMap}
       normalMap={normalMap}
+      clearcoat={0.2}
+      clearcoatRoughness={2}      
       {...props}
     />
   );

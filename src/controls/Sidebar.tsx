@@ -29,7 +29,6 @@ export function Sidebar() {
         <DicePicker />
         <Divider flexItem sx={{ mx: 1 }} />
         <DiceHidden />
-        <DiceExtras />
         <DiceHistory />
         <PluginGate>
           <Divider flexItem sx={{ mx: 1 }} />

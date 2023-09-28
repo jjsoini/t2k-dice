@@ -44,19 +44,19 @@ export function InteractiveTray() {
             <ContactShadows
               resolution={256}
               scale={[1, 2]}
-              position={[0, 0, 0]}
-              blur={0.5}
-              opacity={0.5}
+              position={[-0.002, 0, -0.005]}
+              blur={1}
+              opacity={0.75}
               far={1}
-              color="#222222"
+              color="#1A2018"
             />
             <Tray />
             <PreviewDiceRoll />
             <InteractiveDiceRoll />
             <PerspectiveCamera
               makeDefault
-              fov={28}
-              position={[0, 4.3, 0]}
+              fov={27.7}
+              position={[0, 4.25, 0]}
               rotation={[-Math.PI / 2, 0, 0]}
             />
             {allowOrbit && <OrbitControls />}
