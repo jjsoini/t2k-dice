@@ -17,7 +17,6 @@ export function getDiceToPush(
     for (const dieOrDice of dice.dice) {
       if (isDie(dieOrDice)) {
         const value = values[dieOrDice.id];
-        console.log (dieOrDice.style + " " + dieOrDice.type + ": " + value);
         if (value !== undefined) {
             if (dieOrDice.style === "GALAXY" && value > 1 && value < 6) {
                 if (dieOrDice.type === "D6" ||

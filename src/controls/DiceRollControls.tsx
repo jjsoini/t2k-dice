@@ -25,7 +25,7 @@ import { getDiceToPush } from "../helpers/getDiceToPush";
 import { DiceType } from "../types/DiceType";
 import { useDiceHistoryStore } from "./history";
 import { Die } from "../types/Die";
-import { isDice, Dice } from "../types/Dice";
+import { Dice } from "../types/Dice";
 
 
 const jiggle = keyframes`

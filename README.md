@@ -2,6 +2,8 @@
 
 Beautiful 3D dice extension for FreeLeague Twilight 2000 4e, based on the [Owlbear Rodeo Dice Extension](https://github.com/owlbear-rodeo/dice).
 
+![Example](/docs/header.jpg)
+
 ## Building
 
 This project uses [Yarn](https://yarnpkg.com/) as a package manager.
@@ -39,3 +41,5 @@ All the code specific for the Owlbear Rodeo extension is in the `plugin` folder.
 ## License
 
 GNU GPLv3
+
+Copyright (C) 2023 Jussi Soini
