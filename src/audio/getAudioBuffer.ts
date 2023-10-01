@@ -2,21 +2,12 @@ import * as THREE from "three";
 import { PhysicalMaterial } from "../types/PhysicalMaterial";
 import { WeightClass } from "../types/WeightClass";
 
-import * as lightDice from "./light/dice";
-import * as lightLeather from "./light/leather";
-import * as lightWood from "./light/wood";
 import * as mediumDice from "./medium/dice";
 import * as mediumLeather from "./medium/leather";
 import * as mediumWood from "./medium/wood";
 import * as mediumShake from "./medium/shake";
 
 const buffers: Record<WeightClass, Record<PhysicalMaterial, AudioBuffer[]>> = {
-  LIGHT: {
-    DICE: [],
-    LEATHER: [],
-    WOOD: [],
-    SHAKE: [],
-  },
   MEDIUM: {
     DICE: [],
     LEATHER: [],
@@ -30,12 +21,6 @@ const buffers: Record<WeightClass, Record<PhysicalMaterial, AudioBuffer[]>> = {
  * Used to by the `getNextBuffer` function.
  */
 const indices: Record<WeightClass, Record<PhysicalMaterial, number>> = {
-  LIGHT: {
-    DICE: 0,
-    LEATHER: 0,
-    WOOD: 0,
-    SHAKE: 0,
-  },
   MEDIUM: {
     DICE: 0,
     LEATHER: 0,
@@ -57,19 +42,6 @@ function loadBuffer(
 
 function loadBuffers() {
   const audioLoader = new THREE.AudioLoader();
-
-  loadBuffer(lightDice.a1, "LIGHT", "DICE", audioLoader);
-  loadBuffer(lightDice.a2, "LIGHT", "DICE", audioLoader);
-  loadBuffer(lightDice.a3, "LIGHT", "DICE", audioLoader);
-  loadBuffer(lightDice.a4, "LIGHT", "DICE", audioLoader);
-  loadBuffer(lightLeather.a1, "LIGHT", "LEATHER", audioLoader);
-  loadBuffer(lightLeather.a2, "LIGHT", "LEATHER", audioLoader);
-  loadBuffer(lightLeather.a3, "LIGHT", "LEATHER", audioLoader);
-  loadBuffer(lightLeather.a4, "LIGHT", "LEATHER", audioLoader);
-  loadBuffer(lightWood.a1, "LIGHT", "WOOD", audioLoader);
-  loadBuffer(lightWood.a2, "LIGHT", "WOOD", audioLoader);
-  loadBuffer(lightWood.a3, "LIGHT", "WOOD", audioLoader);
-  loadBuffer(lightWood.a4, "LIGHT", "WOOD", audioLoader);
 
   loadBuffer(mediumDice.a1, "MEDIUM", "DICE", audioLoader);
   loadBuffer(mediumDice.a2, "MEDIUM", "DICE", audioLoader);
