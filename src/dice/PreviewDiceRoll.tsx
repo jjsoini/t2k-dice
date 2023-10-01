@@ -54,11 +54,7 @@ export function PreviewDiceRoll() {
   const listener = useAudioListener();
 
   const diceWeight = useMemo<WeightClass>(() => {
-    if (dice.length > 0 && dice[0].style === "IRON") {
-      return "HEAVY";
-    } else {
       return "MEDIUM";
-    }
   }, [dice]);
 
   // Play a roll sound when the dice button is in focus
@@ -74,11 +70,9 @@ export function PreviewDiceRoll() {
           sound = new THREE.PositionalAudio(listener);
           sound.setBuffer(buffer);
           sound.setRefDistance(3);
-          const volume =
-            diceWeight === "HEAVY" ? random(0.9, 1.1) : random(0.5, 0.6);
+          const volume = random(0.5, 0.6);
           sound.setVolume(volume);
-          const playback =
-            diceWeight === "HEAVY" ? random(0.9, 1.1) : random(0.7, 0.9);
+          const playback = random(0.7, 0.9);
           sound.setPlaybackRate(playback);
           sound.play();
           sound.setLoop(true);

@@ -2,10 +2,6 @@ import * as THREE from "three";
 import { PhysicalMaterial } from "../types/PhysicalMaterial";
 import { WeightClass } from "../types/WeightClass";
 
-import * as heavyDice from "./heavy/dice";
-import * as heavyLeather from "./heavy/leather";
-import * as heavyWood from "./heavy/wood";
-import * as heavyShake from "./heavy/shake";
 import * as lightDice from "./light/dice";
 import * as lightLeather from "./light/leather";
 import * as lightWood from "./light/wood";
@@ -15,12 +11,6 @@ import * as mediumWood from "./medium/wood";
 import * as mediumShake from "./medium/shake";
 
 const buffers: Record<WeightClass, Record<PhysicalMaterial, AudioBuffer[]>> = {
-  HEAVY: {
-    DICE: [],
-    LEATHER: [],
-    WOOD: [],
-    SHAKE: [],
-  },
   LIGHT: {
     DICE: [],
     LEATHER: [],
@@ -40,12 +30,6 @@ const buffers: Record<WeightClass, Record<PhysicalMaterial, AudioBuffer[]>> = {
  * Used to by the `getNextBuffer` function.
  */
 const indices: Record<WeightClass, Record<PhysicalMaterial, number>> = {
-  HEAVY: {
-    DICE: 0,
-    LEATHER: 0,
-    WOOD: 0,
-    SHAKE: 0,
-  },
   LIGHT: {
     DICE: 0,
     LEATHER: 0,
@@ -73,20 +57,6 @@ function loadBuffer(
 
 function loadBuffers() {
   const audioLoader = new THREE.AudioLoader();
-
-  loadBuffer(heavyDice.a1, "HEAVY", "DICE", audioLoader);
-  loadBuffer(heavyDice.a2, "HEAVY", "DICE", audioLoader);
-  loadBuffer(heavyDice.a3, "HEAVY", "DICE", audioLoader);
-  loadBuffer(heavyDice.a4, "HEAVY", "DICE", audioLoader);
-  loadBuffer(heavyLeather.a1, "HEAVY", "LEATHER", audioLoader);
-  loadBuffer(heavyLeather.a2, "HEAVY", "LEATHER", audioLoader);
-  loadBuffer(heavyLeather.a3, "HEAVY", "LEATHER", audioLoader);
-  loadBuffer(heavyLeather.a4, "HEAVY", "LEATHER", audioLoader);
-  loadBuffer(heavyWood.a1, "HEAVY", "WOOD", audioLoader);
-  loadBuffer(heavyWood.a2, "HEAVY", "WOOD", audioLoader);
-  loadBuffer(heavyWood.a3, "HEAVY", "WOOD", audioLoader);
-  loadBuffer(heavyWood.a4, "HEAVY", "WOOD", audioLoader);
-  loadBuffer(heavyShake.a1, "HEAVY", "SHAKE", audioLoader);
 
   loadBuffer(lightDice.a1, "LIGHT", "DICE", audioLoader);
   loadBuffer(lightDice.a2, "LIGHT", "DICE", audioLoader);

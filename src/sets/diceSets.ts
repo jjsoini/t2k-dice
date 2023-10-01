@@ -4,24 +4,14 @@ import { Die } from "../types/Die";
 
 import * as galaxyPreviews from "../previews/galaxy";
 import * as gemstonePreviews from "../previews/gemstone";
-import * as glassPreviews from "../previews/glass";
-import * as ironPreviews from "../previews/iron";
 import * as nebulaPreviews from "../previews/nebula";
-import * as sunrisePreviews from "../previews/sunrise";
-import * as sunsetPreviews from "../previews/sunset";
-import * as walnutPreviews from "../previews/walnut";
 
 import allPreview from "../previews/all.png";
 
 const standardPreviews: Record<DiceStyle, string> = {
   GALAXY: galaxyPreviews.Set,
   GEMSTONE: gemstonePreviews.D100,
-  GLASS: glassPreviews.D20,
-  IRON: ironPreviews.D20,
   NEBULA: nebulaPreviews.D20,
-  SUNRISE: sunrisePreviews.D20,
-  SUNSET: sunsetPreviews.D20,
-  WALNUT: walnutPreviews.D20,
 };
 
 function createStandardSet(style: DiceStyle): DiceSet {
