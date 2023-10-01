@@ -12,7 +12,7 @@ export const Dice = React.forwardRef<THREE.Group, DiceProps>(
       <DiceMesh
         diceType={die.type}
         {...props}
-        sharp={die.style === "WALNUT"}
+        sharp={false}
         ref={ref}
       >
         <DiceMaterial diceStyle={die.style} />
