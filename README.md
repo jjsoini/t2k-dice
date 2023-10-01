@@ -41,5 +41,3 @@ All the code specific for the Owlbear Rodeo extension is in the `plugin` folder.
 ## License
 
 GNU GPLv3
-
-Copyright (C) 2023 Jussi Soini
