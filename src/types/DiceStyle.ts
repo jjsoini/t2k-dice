@@ -1,4 +1,4 @@
 export type DiceStyle =
-  | "GALAXY"
-  | "GEMSTONE"
-  | "NEBULA";
+  | "T2K1"
+  | "T2K2"
+  | "T2K3";

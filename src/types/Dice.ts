@@ -7,8 +7,8 @@ import { Die } from "./Die";
  * @example <caption>2d6 with a +6 bonus to the entire roll</caption>
  * {
  *  dice: [
- *    {id: "123", set: "NEBULA", type: "D6"},
- *    {id: "234", set: "NEBULA", type: "D6"},
+ *    {id: "123", set: "T2K3", type: "D6"},
+ *    {id: "234", set: "T2K3", type: "D6"},
  *  ],
  *  bonus: 6
  * }
@@ -17,18 +17,18 @@ import { Die } from "./Die";
  * {
  *  dice: [
  *    {
- *      dice: [{id: "123", set: "NEBULA", type: "D6"}],
+ *      dice: [{id: "123", set: "T2K3", type: "D6"}],
  *      bonus: 3
  *    },
- *    {id: "234", set: "NEBULA", type: "D8"}]
+ *    {id: "234", set: "T2K3", type: "D8"}]
  *  ],
  * }
  *
  * @example <caption>A D20 rolled at advantage with a bonus +6 to the roll</caption>
  * {
  *  dice: [
- *    {id: "123", set: "NEBULA", type: "D20"},
- *    {id: "234", set: "NEBULA", type: "D20"}
+ *    {id: "123", set: "T2K3", type: "D20"},
+ *    {id: "234", set: "T2K3", type: "D20"}
  *  ],
  *  combination: "HIGHEST",
  *  bonus: 6
@@ -37,8 +37,8 @@ import { Die } from "./Die";
  * @example <caption>A single D100 rolled with an added D10</caption>
  * {
  *  dice: [
- *    {id: "123", set: "NEBULA", type: "D100"},
- *    {id: "234", set: "NEBULA", type: "D10"}
+ *    {id: "123", set: "T2K3", type: "D100"},
+ *    {id: "234", set: "T2K3", type: "D10"}
  *  ],
  * }
  *
@@ -47,14 +47,14 @@ import { Die } from "./Die";
  *  dice: [
  *    {
  *       dice: [
- *        {id: "123", set: "NEBULA", type: "D100"},
- *        {id: "234", set: "NEBULA", type: "D10"}
+ *        {id: "123", set: "T2K3", type: "D100"},
+ *        {id: "234", set: "T2K3", type: "D10"}
  *      ],
  *    },
  *    {
  *      dice: [
- *        {id: "345", set: "NEBULA", type: "D100"},
- *        {id: "456", set: "NEBULA", type: "D10"}
+ *        {id: "345", set: "T2K3", type: "D100"},
+ *        {id: "456", set: "T2K3", type: "D10"}
  *      ],
  *    },
  *  ],

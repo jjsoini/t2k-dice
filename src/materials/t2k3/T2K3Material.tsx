@@ -5,7 +5,7 @@ import orm from "./orm.jpg";
 import normal from "./normal.jpg";
 import { gltfTexture } from "../../helpers/gltfTexture";
 
-export function NebulaMaterial(
+export function T2K3Material(
   props: JSX.IntrinsicElements["meshPhysicalMaterial"]
 ) {
   const [albedoMap, ormMap, normalMap] = useTexture(

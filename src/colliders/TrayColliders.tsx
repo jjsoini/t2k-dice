@@ -32,7 +32,7 @@ export function TrayColliders(props: JSX.IntrinsicElements["group"]) {
         type="fixed"
         friction={1}
         restitution={0.9}
-        userData={{ material: "WOOD" }}
+        userData={{ material: "LEATHER" }}
       >
         {/* Bottom wall */}
         <CuboidCollider

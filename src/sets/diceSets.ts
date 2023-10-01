@@ -2,16 +2,16 @@ import { DiceSet } from "../types/DiceSet";
 import { DiceStyle } from "../types/DiceStyle";
 import { Die } from "../types/Die";
 
-import * as galaxyPreviews from "../previews/galaxy";
-import * as gemstonePreviews from "../previews/gemstone";
-import * as nebulaPreviews from "../previews/nebula";
+import * as t2k1Previews from "../previews/t2k1";
+import * as t2k2Previews from "../previews/t2k2";
+import * as t2k3Previews from "../previews/t2k3";
 
 import allPreview from "../previews/all.png";
 
 const standardPreviews: Record<DiceStyle, string> = {
-  GALAXY: galaxyPreviews.Set,
-  GEMSTONE: gemstonePreviews.D100,
-  NEBULA: nebulaPreviews.D20,
+  T2K1: t2k1Previews.Set,
+  T2K2: t2k2Previews.D100,
+  T2K3: t2k3Previews.D20,
 };
 
 function createStandardSet(style: DiceStyle): DiceSet {
@@ -24,8 +24,8 @@ function createStandardSet(style: DiceStyle): DiceSet {
       { id: `${id}_D8`, type: "D8", style },
       { id: `${id}_D10`, type: "D10", style },
       { id: `${id}_D12`, type: "D12", style },
-      { id: `${id}_D6ammo`, type: "D6", style: "GEMSTONE" },
-      { id: `${id}_D6location`, type: "D6", style: "NEBULA" },
+      { id: `${id}_D6ammo`, type: "D6", style: "T2K2" },
+      { id: `${id}_D6location`, type: "D6", style: "T2K3" },
     ],
     previewImage: standardPreviews[style],
   };
@@ -37,8 +37,8 @@ function createSecondarySet(style: DiceStyle): DiceSet {
     id,
     name: `${style.toLowerCase()} dice`,
     dice: [
-      { id: `${id}_D4`, type: "D4", style: "GALAXY" },
-      { id: `${id}_D20`, type: "D20", style: "GALAXY" },
+      { id: `${id}_D4`, type: "D4", style: "T2K1" },
+      { id: `${id}_D20`, type: "D20", style: "T2K1" },
       { id: `${id}_D100`, type: "D100", style },
     ],
     previewImage: standardPreviews[style],
@@ -46,7 +46,7 @@ function createSecondarySet(style: DiceStyle): DiceSet {
 }
 
 const standardSets = [
-  createStandardSet("GALAXY"), createSecondarySet("GEMSTONE"),
+  createStandardSet("T2K1"), createSecondarySet("T2K2"),
 ];
 
 const allSet: DiceSet = {

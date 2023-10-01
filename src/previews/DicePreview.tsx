@@ -3,14 +3,14 @@ import { styled } from "@mui/material/styles";
 import { DiceStyle } from "../types/DiceStyle";
 import { DiceType } from "../types/DiceType";
 
-import * as galaxyPreviews from "./galaxy";
-import * as gemstonePreviews from "./gemstone";
-import * as nebulaPreviews from "./nebula";
+import * as t2k1Previews from "./t2k1";
+import * as t2k2Previews from "./t2k2";
+import * as t2k3Previews from "./t2k3";
 
 const previews: Record<DiceStyle, Record<DiceType, string>> = {
-  GALAXY: galaxyPreviews,
-  GEMSTONE: gemstonePreviews,
-  NEBULA: nebulaPreviews,
+  T2K1: t2k1Previews,
+  T2K2: t2k2Previews,
+  T2K3: t2k3Previews,
 };
 
 interface PreviewImageProps {

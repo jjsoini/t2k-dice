@@ -52,9 +52,9 @@ export function getCombinedDiceValue(
     if (isDie(dieOrDice)) {
       const value = values[dieOrDice.id];
       if (value !== undefined) {
-        if (dieOrDice.style === "NEBULA" && dieOrDice.type === "D6") {
+        if (dieOrDice.style === "T2K3" && dieOrDice.type === "D6") {
           currentValues.push(0);
-        } else if (dieOrDice.style === "GEMSTONE" && dieOrDice.type === "D6") {
+        } else if (dieOrDice.style === "T2K2" && dieOrDice.type === "D6") {
           currentValues.push(0);
         } else if (dieOrDice.type === "D4" || dieOrDice.type === "D20") {
           currentValues.push(value);
