@@ -1,28 +1,6 @@
-# Owlbear Rodeo Dice
+# Twilight 2000 4e Dice
 
-Beautiful 3D dice extension for d20 based systems
-
-![Example](/docs/header.jpg)
-
-## Installing
-
-The extension can be installed from the [store page](https://extensions.owlbear.rodeo/dice).
-
-## How it Works
-
-This project uses [React](https://reactjs.org/) for UI, [Three.js](https://threejs.org/) for rendering and [Rapier](https://rapier.rs/) for physics.
-
-The physics simulation is used to both generate the animation for the roll as well as the final roll values.
-
-> Wait is it really random if physics is used to determine the result? How do I know the dice rolls are fair?
-
-Short answer yes, the dice are fair. Long answer [here's a statistical analysis](https://blog.owlbear.rodeo/are-owlbear-rodeos-dice-fair/) of the rolling methodology.
-
-In order to sync rolls over the network efficiently we rely on the fact the Rapier is a deterministic physics engine. This means that across two different computers we'll get the same result given the same initial parameters.
-
-So we only need to make sure that all the initial parameters are synced and then each client can run its own simulation and end up with the correct animation.
-
-To try out the dice roller outside of Owlbear Rodeo you can head to <https://dice.owlbear.rodeo/>.
+Beautiful 3D dice extension for FreeLeague Twilight 2000 4e, based on the [Owlbear Rodeo Dice Extension](https://github.com/owlbear-rodeo/dice).
 
 ## Building
 
@@ -61,11 +39,3 @@ All the code specific for the Owlbear Rodeo extension is in the `plugin` folder.
 ## License
 
 GNU GPLv3
-
-## Contributing
-
-This project is provided as an example of how to use the Owlbear Rodeo SDK. As such it is unlikely that we will accept pull requests for new features.
-
-Instead we encourage you to fork this repository and build the dice roller of your dreams.
-
-Copyright (C) 2023 Owlbear Rodeo
