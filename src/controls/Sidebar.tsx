@@ -4,7 +4,6 @@ import Divider from "@mui/material/Divider";
 
 import { DiceSetPicker } from "./DiceSetPicker";
 import { DicePicker } from "./DicePicker";
-import { DiceExtras } from "./DiceExtras";
 import { DiceHidden } from "./DiceHidden";
 import { DiceHistory } from "./DiceHistory";
 
