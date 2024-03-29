@@ -6,6 +6,7 @@ import { DiceSetPicker } from "./DiceSetPicker";
 import { DicePicker } from "./DicePicker";
 import { DiceHidden } from "./DiceHidden";
 import { DiceHistory } from "./DiceHistory";
+import { SupportCreator } from "./SupportCreator";
 
 import { PluginGate } from "../plugin/PluginGate";
 import { DiceRollSync } from "../plugin/DiceRollSync";
@@ -29,6 +30,7 @@ export function Sidebar() {
         <Divider flexItem sx={{ mx: 1 }} />
         <DiceHidden />
         <DiceHistory />
+        <SupportCreator />
         <PluginGate>
           <Divider flexItem sx={{ mx: 1 }} />
           <DiceRollSync />
